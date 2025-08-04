@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Cleaner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="https://img.icons8.com/ios-filled/50/4a90e2/csv.png" alt="CSV Icon" style="vertical-align:middle;margin-right:10px;">
+            CSV Cleaner
+        </h1>
+        <p class="subtitle">Easily clean your CSV files: remove duplicates, fill missing values, and standardize columns.</p>
+        <form action="/clean" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="file" class="custom-file-upload">
+                <input type="file" name="file" id="file" accept=".csv" required>
+                Choose CSV File
+            </label>
+            <button type="submit">Upload & Clean</button>
+        </form>
+        <footer>
+            <p>Made with <span style="color:#e25555;">&#10084;</span> using Flask & Pandas</p>
+        </footer>
+    </div>
+</body>
+</html>
